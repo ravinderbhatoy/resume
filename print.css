@@ -1,0 +1,30 @@
+@page {
+    size: A4;
+}
+
+body {
+    width: 210mm;
+    max-width: 210mm;
+}
+
+.container {
+    width: 100%;
+}
+
+.section {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+}
+
+header .contact-info {
+    white-space: nowrap;
+}
+
+header .contact-info span {
+    display: inline-block;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-size: 10pt; /* Adjust font size */
+}
+
+/* Add any other necessary print styles here */
