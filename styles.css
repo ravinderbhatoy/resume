@@ -63,12 +63,12 @@ h1 {
 /* Phone number blur effect */
 .phone-blur a {
     filter: blur(4px);
+    pointer-events: none;
+    cursor: default;
     transition: filter 0.3s ease;
 }
 
-.phone-blur:hover a {
-    filter: blur(0);
-}
+
 
 /* Print styles update */
 @media print {
