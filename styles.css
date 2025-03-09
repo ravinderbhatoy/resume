@@ -10,6 +10,11 @@ body {
     font-size: 0.8rem;
 }
 
+p{
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
 
 dl {
     display: flex;
@@ -112,21 +117,24 @@ h2 {
     margin-bottom: 1em;
 }
 
-.job-header, .project-header {
+.project-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
-.company-details {
-    text-align: right;
+.job-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
 }
 
-.company-details > span {
+.duration{
     font-size: 0.8rem;
 }
-
 h3 {
     color: #333;
     font-weight: bold;
@@ -199,11 +207,11 @@ li {
         gap: 0.5rem;
     }
 
-    .job-header, .project-header {
+    .project-header {
         flex-direction: column;
     }
 
-    .company-details {
+    .duration {
         text-align: left;
         margin-top: 0.5rem;
     }

@@ -1,17 +1,9 @@
 @media print {
-    div{
-        display: block;
-    }
     .container {
-        zoom: 90%;
+        zoom: 95%;
         margin-inline: auto;
         width:  100%; /* A4 width */
-    }
-
-    .company-details {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+        padding: 0.5cm;
     }
 
     .contact-info {
