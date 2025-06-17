@@ -247,3 +247,10 @@ li {
         box-shadow: none;
     }
 } 
+
+span em {
+    font-style: italic;
+    color: #666; /* Lighter gray for emphasis */
+    display: block;
+    text-align: center;
+}

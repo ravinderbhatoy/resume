@@ -14,9 +14,9 @@
         margin-right: 0.4rem;
     }
     .phone-blur a {
-        filter: blur(4px);
+        /* filter: blur(4px);
         pointer-events: none;
         cursor: default;
-        transition: filter 0.3s ease;
+        transition: filter 0.3s ease; */
     }
 }/* Add any other necessary print styles here */
