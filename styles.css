@@ -1,3 +1,8 @@
+:root {
+   --color-fg-default: #24292f;  
+   --color-border-default: #d0d7de;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +12,31 @@
 
 body {
     background-color: #1a1a1a; /* Dark background for the body */
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.45 
+}
+
+h1 {
+    color: var(--color-fg-default); /* Darker blue */
+    font-size: 1.5rem; /* Reduced from 2.5rem */
+}
+
+nav {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: #004d99; /* Darker blue */
+    text-decoration: none;
+}
+
+/* Icon and Link Styles */
+nav i {
+  width: 16px;
+  color: var(--color-fg-default)
 }
 
 p{
@@ -36,6 +65,10 @@ dt {
     unicode-bidi: isolate;
 }
 
+strong {
+  font-size: 0.9rem;
+}
+
 .project-link {
     color: #333;
 }
@@ -55,38 +88,13 @@ header {
 }
 
 
-h1 {
-    color: #004d99; /* Darker blue */
-    font-size: 2rem; /* Reduced from 2.5rem */
-    margin-bottom: 1rem;
-}
 
-.contact-info {
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
 
-.contact-info span {
-    color: #333;
-    font-size: 0.9rem;
-}
 
-.contact-info a {
-    color: #004d99; /* Darker blue */
-    text-decoration: none;
-}
-
-/* Icon and Link Styles */
-.contact-info i {
-    width: 16px;
-    color: #004d99;
-}
 
 
 /* Phone number blur effect */
-.phone-blur a {
+.blur {
     filter: blur(4px);
     pointer-events: none;
     cursor: default;
@@ -95,21 +103,17 @@ h1 {
 
 /* Print styles update */
 @media print {
-    .phone-blur a {
+    .blur{
         filter: blur(0);
     }
 }
-/* Section Styles */
-/*.section {*/
-/*    margin-bottom: 1rem;*/
-/*}*/
 
 h2 {
-    color: #004d99; /* Darker blue */
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #004d99; /* Darker blue */
-    padding-bottom: 0.5rem;
+    color: var(--color-fg-default); 
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    border-bottom: .0625rem solid var(--color-border-default); 
+    text-transform: uppercase;
 }
 
 /* Experience Styles */
@@ -247,6 +251,11 @@ li {
         box-shadow: none;
     }
 } 
+
+.caption {
+    font-style: italic;
+    color: #666; /* Lighter gray for emphasis */
+}
 
 span em {
     font-style: italic;
