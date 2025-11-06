@@ -1,68 +1,72 @@
 :root {
-   --color-fg-default: #24292f;  
-   --color-border-default: #d0d7de;
+  --color-fg-default: #24292f;
+  --color-border-default: #d0d7de;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #1a1a1a; /* Dark background for the body */
-    font-size: 0.9rem;
-    line-height: 1.45 
+  color: var(--color-fg-default);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  background-color: var(--color-fg-default);
 }
 
 h1 {
-    color: var(--color-fg-default); /* Darker blue */
-    font-size: 1.5rem; /* Reduced from 2.5rem */
+  color: var(--color-fg-default); /* Darker blue */
+  font-size: 1.5rem; /* Reduced from 2.5rem */
+}
+
+a {
+  color: #004d99; /* Darker blue */
+  text-decoration: none;
 }
 
 nav {
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-nav a {
-    color: #004d99; /* Darker blue */
-    text-decoration: none;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 /* Icon and Link Styles */
 nav i {
   width: 16px;
-  color: var(--color-fg-default)
+  color: var(--color-fg-default);
 }
 
-p{
-    font-size: 0.9rem;
-    margin-left: 0.5rem;
+p {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
 }
-
 
 dl {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0.25rem 0;
-    padding: 0 0.5rem;
-    margin-block: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  margin-block: 0.5rem;
 }
 
 dt {
-    color: #57606a;
-    background-color: #ddf4ff;
-    margin-right: 0.35rem;
-    margin-bottom: 0.25rem;
-    padding: 0.35rem;
-    border-radius: 0.35rem;
-    font-size: 0.7rem;
-    display: block;
-    unicode-bidi: isolate;
+  color: #57606a;
+  background-color: #ddf4ff;
+  margin-right: 0.35rem;
+  margin-bottom: 0.15rem;
+  padding: 0.175rem 0.25rem;
+  border-radius: 0.35rem;
+  font-size: 0.8rem;
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.labels dt {
+  background-color: rgba(175, 184, 193, 0.2);
+  color: var(--color-fg-default);
+  border-radius: 2rem;
 }
 
 strong {
@@ -70,196 +74,182 @@ strong {
 }
 
 .project-link {
-    color: #333;
+  color: #333;
 }
 
 .container {
-    max-width: 21cm; /* A4 width */
-    min-height: 29.7cm; /* A4 height */
-    margin: 0 auto;
-    background-color: white; /* Keep resume background white */
-    padding: 1cm 1cm 1cm 1cm; /* Reduced top and side padding */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-width: 21cm; /* A4 width */
+  min-height: 29.7cm; /* A4 height */
+  margin: 0 auto;
+  background-color: white; /* Keep resume background white */
+  padding: 1cm 1cm 1cm 1cm; /* Reduced top and side padding */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Header Styles */
 header {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
-
-
-
-
-
-
 
 /* Phone number blur effect */
 .blur {
-    filter: blur(4px);
-    pointer-events: none;
-    cursor: default;
-    transition: filter 0.3s ease;
+  filter: blur(4px);
+  pointer-events: none;
+  cursor: default;
+  transition: filter 0.3s ease;
 }
 
 /* Print styles update */
 @media print {
-    .blur{
-        filter: blur(0);
-    }
+  .blur {
+    filter: blur(0);
+  }
 }
 
 h2 {
-    color: var(--color-fg-default); 
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-    border-bottom: .0625rem solid var(--color-border-default); 
-    text-transform: uppercase;
+  color: var(--color-fg-default);
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  border-bottom: 0.0625rem solid var(--color-border-default);
+  text-transform: uppercase;
 }
 
 /* Experience Styles */
-.experience-item, .project-item {
-    margin-bottom: 1em;
+.experience-item,
+.project-item {
+  margin-bottom: 0.625rem;
 }
 
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0.5rem;
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
 }
 
-.job-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 0.5rem;
-}
-
-.duration{
-    font-size: 0.8rem;
+.duration {
+  font-size: 0.8rem;
 }
 h3 {
-    color: #333;
-    font-weight: bold;
-    font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 ul {
-    list-style-position: inside;
-    margin-left: 1rem;
+  list-style-position: inside;
 }
 
 li {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    max-width: 40rem;
+  font-size: 0.8rem;
+  list-style: none;
+  line-height: 1.45;
+  max-width: 40rem;
 }
 
 /* Project Styles */
-.github-link, .live-link {
-    color: #004d99; /* Darker blue */
-    text-decoration: none;
-    margin-left: 1rem;
-}
-
-.project-links {
-    display: flex;
-    gap: 0.3rem;
+.github-link,
+.live-link {
+  color: #004d99; /* Darker blue */
+  text-decoration: none;
+  margin-left: 1rem;
 }
 
 /* Skills Styles */
 .skills-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-category h3 {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .skill-category p {
-    line-height: 1.4;
-    font-size: 0.9rem
+  line-height: 1.4;
+  font-size: 0.9rem;
 }
 
 /* Education Styles */
 .education-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.education-item p {
-    margin-bottom: 0.5rem;
+.education-item {
+  margin-bottom: 0.5rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        margin: 1rem auto;
-    }
+  .container {
+    margin: 1rem auto;
+  }
 
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    .contact-info {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-    .project-header {
-        flex-direction: column;
-    }
+  .project-header {
+    flex-direction: column;
+  }
 
-    .duration {
-        text-align: left;
-        margin-top: 0.5rem;
-    }
+  .duration {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
 }
 
 /* Add print-specific styles */
 @media print {
-    body {
-        background-color: white;
-    }
+  body {
+    background-color: white;
+  }
 
-    .container {
-        width: 21cm;
-        height: 29.7cm;
-        margin: 0;
-        padding: 1.5cm 1.5cm 2cm 1.5cm; /* Match the new padding */
-        box-shadow: none;
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
-    }
+  .container {
+    width: 21cm;
+    height: 29.7cm;
+    margin: 0;
+    padding: 1.5cm 1.5cm 2cm 1.5cm; /* Match the new padding */
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
 
-    @page {
-        size: A4;
-        margin: 0;
-    }
+  @page {
+    size: A4;
+    margin: 0;
+  }
 }
 
 /* Adjust responsive design for screens */
 @media screen and (max-width: 21cm) {
-    .container {
-        margin: 0;
-        padding: 1cm 1cm 1cm 1cm;
-        box-shadow: none;
-    }
-} 
+  .container {
+    margin: 0;
+    padding: 1cm 1cm 1cm 1cm;
+    box-shadow: none;
+  }
+}
 
 .caption {
-    font-style: italic;
-    color: #666; /* Lighter gray for emphasis */
+  font-style: italic;
+  color: #666; /* Lighter gray for emphasis */
+}
+
+span {
+  font-size: 0.8rem;
 }
 
 span em {
-    font-style: italic;
-    color: #666; /* Lighter gray for emphasis */
-    display: block;
-    text-align: center;
+  font-style: italic;
+  color: #666; /* Lighter gray for emphasis */
+  display: block;
+  text-align: center;
 }
